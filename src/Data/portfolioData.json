@@ -1,0 +1,42 @@
+{
+    "name": "Chandrashekher Prasad",
+    "mainAbout": [
+      "2nd Year B.Tech Student ,",
+      "Frontend Developer , ",
+      "Tech Enthusiast"
+    ],
+    "aboutMe": "Hello! I'm Chandrashekher, currently pursuing a B.Tech at Maharaja Agrasen Institute of Technology in New Delhi. As a second-year student, I'm dedicating my time to mastering data structures and algorithms with <span>Java</span>. I have a strong background in <span>HTML</span> and <span>CSS</span>, and I'm expanding my web development skills by learning <span>React JS</span>. I also have experience with programming languages such as <span>C</span>, <span>Python</span>, and <span>JavaScript</span>",
+    "projects": [
+      {
+        "name": "GitHub",
+        "description": "Uses GitHub Api to fetch details of a user",
+        "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Github-Profile",
+        "img":"assets/Screenshot 2024-08-15 221728.png"
+      },
+      {
+        "name": "NotesApp",
+        "description": "Make multiple note pads with the ability to store them locally on browser",
+        "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Notes-Apps",
+        "img" : "assets/Screenshot 2024-08-18 214606.png"
+      },
+      {
+        "name": "InsectCatchGame",
+        "description": "Small Game to catch as many insects present on th screen",
+        "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Insect-Catch-Game",
+        "img":"assets/Screenshot 2024-08-18 215019.png"
+      },
+      {
+        "name": "TodoLists",
+        "description": "Create your own to do lists",
+        "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Todo-List",
+        "img":"assets/Screenshot 2024-08-18 215215.png"
+      },
+      {
+        "name": "PasswordGenerator",
+        "description": "Create random Passwords of variable length ",
+        "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Timer",
+        "img":"assets/Screenshot 2024-08-18 215735.png"
+      }
+  
+    ]
+  }
