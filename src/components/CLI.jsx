@@ -25,8 +25,11 @@ const CLI = () => {
         <div className='text-white overflow-y-scroll h-96'>
             {
                 selector.map((line,index) => (
-                    <p key={index} className='text-wrap text-gray-300'>{line}                     
-                    </p>
+                    <div key={index} className='text-wrap text-gray-300'>
+                        {line}             
+                    </div>
+
+                    
                 ))
             }
             <div>
