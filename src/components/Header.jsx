@@ -2,9 +2,25 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='bg-blue-500 text-white flex justify-between'>
-        <h3 className='ml-4'>CP03: /PORTFOLIO</h3>
-        <p className='cursor-pointer px-2 hover:bg-red-600'>X</p>
+    <div>
+        <div>
+            <p>CP03</p>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Skills</li>
+                    <li>Contact</li>
+
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h1>Hire Me</h1>
+        </div>
     </div>
   )
 }

@@ -32,10 +32,10 @@ const CLI = () => {
                     
                 ))
             }
-            <div>
+            <div className='flex my-1 inline-block'>
                 <span>$</span>
-                <input type="text"
-                    className="bg-black px-2 outline-none text-sm text-gray-300"
+                <textarea type="text"
+                    className="bg-black outline-none text-sm text-gray-300 w-full h-96 mx-1"
                     value={input} 
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleCommand()}
