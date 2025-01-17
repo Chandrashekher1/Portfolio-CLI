@@ -16,16 +16,18 @@ const cliSlice = createSlice({
       const command = args[0].toLowerCase()
       const argument = args[1] || ""
       let output = ""
+      let directory = ""
 
       switch (command) {
         case "ls":
           if (state.currentDir === "projects") {
-            output = portfolio.projects.map((project) => project.name).join("\n")
+            output = portfolio.projects.map((project) => project.name).join("   ")
           } else if (state.currentDir === "") {
-            output = `contact  \nskills  \nprojects \neducation \nachievements \nhobbies`
+            output = " projects/   contact/    skills    achievements   hobbies"
+            
           }
           else if (state.currentDir === "contact") {
-            output = Object.keys(portfolio.contact).join("\n")
+            output = Object.keys(portfolio.contact).join("    ")
           }
           else if (state.currentDir === "skills") {
             output = portfolio.skills.map((skill) => skill).join("\n ,  ")
@@ -42,68 +44,54 @@ const cliSlice = createSlice({
           if (argument === "projects") {
             state.currentDir = "projects"
             output = "You are now in the projects directory."
+            directory = "projects"
           } else if (argument === "..") {
             state.currentDir = ""
             output = "Returned to the root directory."
           }else if (argument === "contact"){
             state.currentDir = "contact"
             output = "You are now in the contact directory."
-          }
-          else if (argument === "skills"){
-            state.currentDir = "skills"
-            output = "You are now in the skills directory."
-          }
-          else if (argument === "achivements"){
-            state.currentDir = "achivements"
-            output = "You are now in the achivements directory."
+            directory = "contact"
           } 
-          else if (argument === "education"){
-            state.currentDir = "education"
-            output = "You are now in the education directory."
-          }
-          else if (argument === "hobbies"){
-            state.currentDir = "hobbies"
-            output = "You are now in the hobbies directory."
-          }
+         
            else {
-            output = `Directory '${argument}' not found.`
+            output = `cd: '${argument}' not a directory.`
           }
           break;
 
           case "cat":
             if (state.currentDir === "contact" && argument === "email") {
-              output = Object.values(portfolio.contact.email)
+              output = Object.values(portfolio.contact.email).join("")
             }
             else if(state.currentDir === "contact" && argument === "phone") {
-              output = Object.values(portfolio.contact.phone)
+              output = Object.values(portfolio.contact.phone).join("")
             }
             else if(state.currentDir === "contact" && argument === "linkedin") {
-              output = Object.values(portfolio.contact.linkedin)
+              output = Object.values(portfolio.contact.linkedin).join("")
             }
             else if(state.currentDir === "contact" && argument === "github") {
-              output = Object.values(portfolio.contact.github)
+              output = Object.values(portfolio.contact.github).join("")
             }
              else if (state.currentDir === "" && argument === "achievements") {
               output = portfolio.achievements.map((achi) =>achi ).join("\n ,")
             }
             else if (state.currentDir === "" && argument === "hobbies") {
-              output = portfolio.hobbies.map((achi) =>achi ).join("\n ,")
+              output = portfolio.hobbies.map((achi) =>achi ).join("\n")
+            }
+            else if (state.currentDir === "" && argument === "skills") {
+              output = portfolio.skills.map((achi) =>achi ).join(" , ")
             }
             else if (state.currentDir === "projects") {
               const project = portfolio.projects.find(
                 (p) => p.name.toLowerCase() === argument.toLowerCase()
               );
               if (project) {
-                output = `
-                    Name: ${project.name}\n 
-                    Description: ${project.description}\n 
-                    Link: ${project.link}
-                    `
+                output = `Name: ${project.name} \nDescription: ${project.description} \nWebLink: ${project.WebLink} \nGitHub Link : ${project.GitHub}`
               } else {
                 output = `Project '${argument}' not found.`;
               }
             } else {
-              output = `Invalid file or directory '${argument}'.`
+              output = `cat:'${argument}: No such file or directory'.`
             }
             break;
         
@@ -118,7 +106,10 @@ const cliSlice = createSlice({
                 output = portfolio.summary
             } 
             else if (state.currentDir === ""){
-              output = `Sorry ${argument} is not valid in grep. Used Only for name , summary and designation `
+              output = `grep: ${argument}: is not valid. Used Only for name , summary and designation `
+            }
+            else{
+              output = `grep: ${argument}:not valid `
             }   
             break
         case "clear" : 
@@ -133,7 +124,8 @@ const cliSlice = createSlice({
           output = `Command '${command}' not found. Type '--help' for a list of commands.`
       }
       state.history.push(`$ ${input}`)
-      state.history.push(output)
+      state.history.push(`${output}`)
+      state.history.push(directory)
     },
   },
 })

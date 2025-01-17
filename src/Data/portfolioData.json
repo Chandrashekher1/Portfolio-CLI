@@ -1,6 +1,7 @@
 {
   "name": "Chandrashekher Prasad",
   "designation": "B.Tech Student | Frontend Developer | Tech Enthusiast",
+  "resume" : "https://drive.google.com/file/d/1bpricUr-svmdwIU-elsHPP5H3PUrFZS7/view?usp=sharing",
   "contact": {
     "email": "cpsaw999041@gmail.com",
     "phone": "+91-9990418622",
@@ -20,39 +21,28 @@
   ],
   "projects": [
     {
-      "name": "GitHubUserFinder",
-      "description": "A web application leveraging the GitHub API to fetch and display user details, repositories, and contributions in a dynamic, responsive interface.",
-      "technologies": ["HTML", "CSS", "JavaScript", "GitHub API"],
-      "link": "https://drive.google.com/file/d/1bpricUr-svmdwIU-elsHPP5H3PUrFZS7/view?usp=sharing",
-      "img": "assets/Screenshot-2024-08-15-221728.png"
+      "name": "CinemaSense",
+      "description": "Designed an interactive MovieGPT website that suggests personalized movie recommendations using GPT API.",
+      "technologies": ["ReactJs", "Tailwind CSS", "GPT-API"],
+      "WebLink": "https://moviecpgpt.vercel.app/browse",
+      "GitHub" : "https://github.com/Chandrashekher1/MovieGPT" ,
+      "img": "assets/MovieGpt.png"
     },
     {
-      "name": "NotesApp",
-      "description": "A multi-functional note-taking app allowing users to create, edit, and save notes locally in their browser.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Notes-Apps",
-      "img": "assets/Screenshot-2024-08-18-214606.png"
+      "name": "TasteTrail",
+      "description": "Developed a dynamic food app to help users discover top-rated restaurants and dishes near their current lo-cation.",
+      "technologies": ["ReactJs", "Tailwind CSS", "Swiggy API"],
+      "WebLink": "https://taste-trail-ten.vercel.app/",
+      "GitHub" : "https://github.com/Chandrashekher1/foodApp",
+      "img": "assets/foodApp.png"
     },
     {
-      "name": "InsectCatchGame",
-      "description": "A fun interactive game where users catch as many insects as they can within a time limit.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Insect-Catch-Game",
-      "img": "assets/Screenshot-2024-08-18-215019.png"
-    },
-    {
-      "name": "TodoListManager",
-      "description": "A productivity tool that allows users to create, organize, and manage their daily tasks efficiently.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Todo-List",
-      "img": "assets/Screenshot-2024-08-18-215215.png"
-    },
-    {
-      "name": "PasswordGenerator",
-      "description": "A utility app that generates secure, random passwords of customizable length to enhance online security.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/Chandrashekher1/Web-Dev-Practice/tree/master/Projects/Timer",
-      "img": "assets/Screenshot-2024-08-18-215735.png"
+      "name": "CPStore",
+      "description": "CPStore is an e-commerce website where customers can easily browse, order, and get shop items delivered to their doorstep.",
+      "technologies": ["ReactJs" , "Talwind Css" ],
+      "WebLink": "https://cpstore-liard.vercel.app/",
+      "GitHub" : "https://github.com/Chandrashekher1/Shop2.O",
+      "img": "assets/CPStore.png"
     }
   ],
   "education": [
